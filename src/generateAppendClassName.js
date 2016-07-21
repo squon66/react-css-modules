@@ -4,8 +4,8 @@ const stylesIndex = new Map();
 
 export default (styles, styleNames: Array<string>, errorWhenNotFound: boolean): string => {
     let appendClassName,
-        stylesIndexMap
-        key;
+        key,
+        stylesIndexMap;
 
     stylesIndexMap = stylesIndex.get(styles);
 
