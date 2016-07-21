@@ -45,8 +45,7 @@
   "scripts": {
     "lint": "eslint ./src ./tests",
     "test": "mocha --compilers js:babel-register ./tests/**/*.js",
-    "install": "npm install",
-    "postinstall": "babel ./src --out-dir ./dist",
+    "postinstall": "npm install --ignore-scripts && babel ./src --out-dir ./dist",
     "build": "babel ./src --out-dir ./dist"
   }
 }
