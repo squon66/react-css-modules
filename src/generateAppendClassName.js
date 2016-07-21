@@ -17,6 +17,15 @@ export default (styles, styleNames: Array<string>, errorWhenNotFound: boolean): 
     } else {
         stylesIndex.set(styles, new Map());
         stylesIndexMap = new Map(stylesIndex);
+        
+        stylesIndex.set(styles, new Map());
+        stylesIndexMap = new Map();
+
+        for (key in stylesIndex) {
+            if(stylesIndex.hasOwnProperty(key)) {
+                stylesIndexMap.set(key, stylesIndex[key]);
+            }
+        }
     }
 
     appendClassName = '';
